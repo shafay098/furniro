@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.htmlClass {
+  position: relative;
+}
+
+.bodyContainerStyle::before {
+  position: absolute;
+  content: "";
+  height: 475px;
+  width: 1089px;
+  background-color: var(--bgColor);
+  top: 0px;
+  z-index: 1;
+}
+
+@media screen and (max-width: 1090px) {
+  .bodyContainerStyle::before {
+    display: none !important;
+  }
+}
+
+.maxline1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.maxline2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: calc(2 * 1.2em); /* Assuming 1.2em is the line-height */
+  line-height: 1.2em; /* Adjust this value to match your line height */
+}
+
+.maxline3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: calc(3 * 1.2em); /* Assuming 1.2em is the line-height */
+  line-height: 1.2em; /* Adjust this value to match your line height */
+}

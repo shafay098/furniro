@@ -1,0 +1,22 @@
+/* headings */
+
+.h1 {
+  font-size: 80px;
+  font-family: var(--Poppins);
+  font-weight: 800;
+  color: var(--sceondaryBlueClr);
+}
+
+/* body */
+
+.p1 {
+  font-family: var(--Poppins);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.p2 {
+  font-family: var(--Poppins);
+  font-size: 16px;
+  font-weight: 400;
+}

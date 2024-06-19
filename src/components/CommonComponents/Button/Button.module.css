@@ -1,0 +1,36 @@
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button[variant="primary"] {
+  background-color: var(--primaryColor);
+  color: white;
+}
+
+.button[variant="secondary"] {
+  background-color: gray;
+  color: white;
+}
+
+/* Optional: Styles for icons */
+.icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconLeft {
+  margin-right: 8px;
+}
+
+.iconRight {
+  margin-left: 8px;
+}
