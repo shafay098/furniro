@@ -4,20 +4,16 @@ export const Header_Links = [
         href: "/"
     } ,
     {
-        title: "Plants",
+        title: "Shop",
         href: "/"
     } ,
     {
-        title: "About Us",
+        title: "About",
         href: "/"
     } ,
     {
         title: "Contact Us",
         href: "/"
     } ,
-    {
-        title: "my plants",
-        href: "/"
-    } ,
-
+   
 ]

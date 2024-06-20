@@ -12,6 +12,10 @@ import useResponsiveHook from "@/hooks/useResponsiveHook";
 
 // icons
 import { GiHamburgerMenu } from "react-icons/gi";
+import { VscAccount } from "react-icons/vsc";
+import { CiSearch } from "react-icons/ci";
+import { FaRegHeart } from "react-icons/fa";
+import { FaCartShopping } from "react-icons/fa6";
 
 // react drawer
 import Drawer from "react-modern-drawer";
@@ -64,19 +68,46 @@ export const Header = () => {
             </Drawer>
           </>
         ) : (
-          <Col xs={6}>
-            <div className={classes.linksCont}>
-              {Header_Links?.map((item) => {
-                return renderLinks(item);
-              })}
-            </div>
-          </Col>
-        )}
+          <>
+            <Col xs={6}>
+              <div className={classes.linksCont}>
+                {Header_Links?.map((item, index) => {
+                  return <div key={index}>{renderLinks(item)}</div>;
+                })}
+              </div>
+            </Col>
 
-        <Col xs={3}>
-          {/* <Image src={"/images/Logo.png"} height={29} width={135} alt="logo" /> */}
-        </Col>
+            <Col xs={3}>
+              <div className={classes?.iconContainer}>
+                {iconsArray?.map((icon, index) => {
+                  return <div key={index}>{icon?.iconjsx}</div>;
+                })}
+              </div>
+            </Col>
+          </>
+        )}
       </Row>
     </Container>
   );
 };
+
+// icons array here can add label also
+
+const iconsArray = [
+  {
+    iconjsx: <VscAccount color="black" size={28} />,
+    label: "Account Alert",
+  },
+  {
+    iconjsx: <CiSearch color="black" size={28} />,
+    label: "Search",
+  },
+  {
+    iconjsx: <FaRegHeart color="black" size={28} />,
+    label: "heart",
+  },
+  {
+    iconjsx: <FaCartShopping color="black" size={28} />,
+    label: "cart shopping",
+  },
+];

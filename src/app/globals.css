@@ -6,7 +6,7 @@
   position: relative;
 }
 
-.bodyContainerStyle::before {
+/* .bodyContainerStyle::before {
   position: absolute;
   content: "";
   height: 475px;
@@ -20,7 +20,7 @@
   .bodyContainerStyle::before {
     display: none !important;
   }
-}
+} */
 
 .maxline1 {
   overflow: hidden;

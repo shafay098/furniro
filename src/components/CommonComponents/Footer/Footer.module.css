@@ -1,0 +1,94 @@
+.headingText {
+  color: black;
+  font-size: 24px;
+  font-family: var(--Poppins);
+  font-weight: 700;
+}
+
+.firstColDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.paraText {
+  color: var(--gray-clr);
+  font-family: var(--Poppins);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.linkStyle {
+  color: black;
+  font-family: var(--Poppins);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.titleLink {
+  color: var(--gray-clr);
+  font-family: var(--Poppins);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.listContainer {
+  margin-top: 46px;
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+}
+
+.inputClass > input {
+  border: none !important;
+  border-bottom: 1px solid black !important;
+  padding-left: 0px !important;
+  width: 80%;
+}
+
+.inputClass > input:focus-visible {
+  outline: none;
+  border-bottom: 1px solid black !important;
+}
+
+.button {
+  /* background-color: orange !important; */
+  padding-left: 0px !important;
+  border-bottom: 1px solid black !important;
+  border-radius: 0px !important;
+  padding-bottom: 5px !important;
+  padding-right: 0px !important;
+}
+
+.subscribeCont {
+  display: flex;
+}
+
+.subscribeText {
+  color: black;
+  font-family: var(--Poppins);
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 1px solid black;
+  height: 35px;
+}
+
+.subscribeText:hover {
+  cursor: pointer;
+}
+
+.hrLineStyle {
+  margin: 2rem 0px;
+}
+
+.paraLast {
+  font-family: var(--Poppins);
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+}

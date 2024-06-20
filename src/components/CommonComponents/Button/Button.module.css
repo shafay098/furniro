@@ -18,6 +18,12 @@
   color: white;
 }
 
+.button[variant="noBorder"] {
+  background-color: white;
+  border: none;
+  color: black !important;
+}
+
 /* Optional: Styles for icons */
 .icon {
   width: 20px;

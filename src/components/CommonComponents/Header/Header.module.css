@@ -1,6 +1,7 @@
 .linksCont {
   display: flex;
-  justify-content: space-between;
+  gap: 75px;
+  justify-content: center;
 }
 
 .headerContainer {
@@ -12,4 +13,9 @@
   display: flex;
   justify-content: end;
   align-items: end;
+}
+
+.iconContainer {
+  display: flex;
+  gap: 75px;
 }

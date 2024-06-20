@@ -1,6 +1,7 @@
 import { Inter, Poppins } from "next/font/google";
 import { mergeClass } from "@/utils/HelperFunctions";
 import { Header } from "@/components/CommonComponents/Header";
+import { Footer } from "@/components/CommonComponents/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
 import "./colors.css";
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
       <body className={"bodyContainerStyle"}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
