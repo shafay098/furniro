@@ -3,20 +3,92 @@
 .h1 {
   font-size: 52px;
   font-family: var(--Poppins);
-  font-weight: 800;
-  color: var(--sceondaryBlueClr);
+  font-weight: 700;
+  color: var(--primary-clr);
+}
+
+.h2 {
+  font-size: 48px;
+  font-family: var(--Poppins);
+  font-weight: 500;
+  color: var(--black-default-clr);
+}
+
+.h3 {
+  font-size: 40px;
+  font-family: var(--Poppins);
+  font-weight: 700;
+  color: var(--text-black-clr);
+}
+
+.h4 {
+  font-size: 36px;
+  font-family: var(--Poppins);
+  font-weight: 500;
+  color: var(--black-default-clr);
+}
+
+.h5 {
+  font-size: 32px;
+  font-family: var(--Poppins);
+  font-weight: 700;
+  color: #333;
+}
+
+.h6 {
+  font-size: 28px;
+  font-family: var(--Poppins);
+  font-weight: 600;
+  color: var(--text-black-clr);
+}
+
+.h7 {
+  font-size: 24px;
+  font-family: var(--Poppins);
+  font-weight: 600;
+  color: var(--text-black-clr);
+}
+
+.h7-default {
+  font-size: 24px;
+  font-family: var(--Poppins);
+  font-weight: 500;
+  color: var(--black-default-clr);
+}
+
+.h7-light {
+  font-size: 24px;
+  font-family: var(--Poppins);
+  font-weight: 400;
+  color: var(--gray-clr);
 }
 
 /* body */
 
 .p1 {
   font-family: var(--Poppins);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
+  color: #666;
 }
+
+/* .p1-light {
+  font-family: var(--Poppins);
+  font-size: 20px;
+  font-weight: 400;
+  color: #666;
+} */
 
 .p2 {
   font-family: var(--Poppins);
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+.p3 {
+  font-family: var(--Poppins);
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
+  color: var(--text-black-v2);
 }

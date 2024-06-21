@@ -9,8 +9,11 @@
 }
 
 .button[variant="primary"] {
-  background-color: var(--primaryColor);
+  background-color: var(--primary-clr);
   color: white;
+  font-family: var(--Poppins);
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .button[variant="secondary"] {
@@ -22,6 +25,15 @@
   background-color: white;
   border: none;
   color: black !important;
+}
+
+.button[variant="outlined"] {
+  border: 1px solid var(--primary-clr);
+  background: white;
+  color: var(--primary-clr);
+  font-family: var(--Poppins);
+  font-weight: 600;
+  font-size: 16px;
 }
 
 /* Optional: Styles for icons */

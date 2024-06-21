@@ -1,10 +1,6 @@
 import Image from "next/image";
-// import { LandingPageView } from "@/views/LandingPage";
-
+import { LandingPageView } from "@/views/LandingPageView";
 export default function Home() {
-  return <>
-  
-  Website struture
-  </>
+  return <LandingPageView/>
 
 }

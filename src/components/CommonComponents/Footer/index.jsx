@@ -30,7 +30,7 @@ export const Footer = () => {
   }
 
   return (
-    <Container>
+    <Container className="mt-32">
       <Row>
         <Col xs={3}>
           <div className={classes?.firstColDiv}>

@@ -1,0 +1,48 @@
+.rootContainer {
+  height: 600px;
+  width: 100%;
+  background-image: url("/images/landingpage_bg-img.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.landingPageCard {
+  position: relative;
+  width: 643px;
+  height: 443px;
+  border-radius: 10px;
+  background: var(--light-mayo-clr);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 30px;
+  justify-content: center;
+  right: 58px;
+}
+
+.buttonContainer {
+  margin-top: 1.5rem;
+}
+
+.buttonContainer > button {
+  padding: 25px 75px !important;
+  border-radius: 0px !important;
+}
+
+.landingPageCard > p:nth-of-type(1) {
+  letter-spacing: 3px;
+}
+
+.imageClass {
+  position: relative;
+  width: 100%;
+  height: 521px;
+}
+
+.imageClass > img {
+  border-radius: 10px;
+}
