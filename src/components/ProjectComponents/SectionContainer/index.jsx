@@ -4,6 +4,7 @@ import classes from "./SectionContainer.module.css";
 import { Button } from "@/components/CommonComponents/Button";
 
 export const SectionContainer = ({
+  containerFluid = false,
   children,
   heading,
   para,
@@ -15,7 +16,7 @@ export const SectionContainer = ({
   btnText = "",
 }) => {
   return (
-    <Container>
+    <Container fluid={containerFluid}>
       <Row className="mt-5">
         <Col
           xs={colWidthHeading.xs}

@@ -106,8 +106,8 @@ const iconsArray = [
     iconjsx: <FaRegHeart color="black" size={28} />,
     label: "heart",
   },
-  {
-    iconjsx: <FaCartShopping color="black" size={28} />,
-    label: "cart shopping",
-  },
+  // {
+  //   iconjsx: <FaCartShopping color="black" size={28} />,
+  //   label: "cart shopping",
+  // },
 ];

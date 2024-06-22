@@ -46,3 +46,32 @@
 .imageClass > img {
   border-radius: 10px;
 }
+
+.secThreeRow {
+  background-color: var(--bg-light-clr);
+}
+
+.imageTextClass {
+  position: relative;
+  width: 404px;
+  height: 582px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  opacity: 0.7;
+}
+
+.swiper1 {
+  width: 200px;
+}

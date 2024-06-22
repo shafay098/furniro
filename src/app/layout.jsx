@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={mergeClass(inter.variable, poppins.variable, "htmlClass")}
     >
-      <body className={"bodyContainerStyle"}>
+      <body className="p-0">
         <Header />
         {children}
         <Footer />
