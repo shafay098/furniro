@@ -23,15 +23,14 @@ import "react-modern-drawer/dist/index.css";
 
 const renderLinks = (link) => {
   return (
-    <Link key={link?.title} href={link?.href}>
+    <Link className={classes?.linkText} key={link?.title} href={link?.href}>
       <p className="p1">{link?.title}</p>
     </Link>
   );
 };
 
 export const Header = () => {
-  let isMobile = useResponsiveHook(768);
-  console.log("🚀 ~ Header ~ isMobile:", isMobile);
+  let isMobile = useResponsiveHook(1200);
 
   const [isOpen, setIsOpen] = React.useState(false);
   const toggleDrawer = () => {
@@ -64,7 +63,22 @@ export const Header = () => {
               direction="right"
               className="bla bla bla"
             >
-              <div>Hello World</div>
+              <div className={classes?.rootContainer}>
+                <div className={classes?.drawerImageCont}>
+                  <Image alt="image" src={"/images/Logo.png"} fill />
+                </div>
+                <div className={classes?.linkRenderingDrawer}>
+                  {Header_Links?.map((item, index) => {
+                    return <div key={index}>{renderLinks(item)}</div>;
+                  })}
+
+                  <div className={classes?.iconContainerDrawer}>
+                    {iconsArray?.map((icon, index) => {
+                      return <div key={index}>{icon?.iconjsx}</div>;
+                    })}
+                  </div>
+                </div>
+              </div>
             </Drawer>
           </>
         ) : (
@@ -95,19 +109,19 @@ export const Header = () => {
 
 const iconsArray = [
   {
-    iconjsx: <VscAccount color="black" size={28} />,
+    iconjsx: <VscAccount color="black" size={25} />,
     label: "Account Alert",
   },
   {
-    iconjsx: <CiSearch color="black" size={28} />,
+    iconjsx: <CiSearch color="black" size={25} />,
     label: "Search",
   },
   {
-    iconjsx: <FaRegHeart color="black" size={28} />,
+    iconjsx: <FaRegHeart color="black" size={25} />,
     label: "heart",
   },
-  // {
-  //   iconjsx: <FaCartShopping color="black" size={28} />,
-  //   label: "cart shopping",
-  // },
+  {
+    iconjsx: <FaCartShopping color="black" size={25} />,
+    label: "cart shopping",
+  },
 ];

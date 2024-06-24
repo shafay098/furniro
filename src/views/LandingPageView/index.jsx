@@ -13,8 +13,10 @@ import {
 } from "@/data/DummyData";
 import { ProductCard } from "@/components/ProjectComponents/ProductCard/ProductCard";
 import { mergeClass } from "@/utils/HelperFunctions";
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import { EffectCoverflow, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+// import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import PhotoAlbum from "react-photo-album";
 
 export const LandingPageView = () => {
   const sectionOne = () => {
@@ -58,7 +60,6 @@ export const LandingPageView = () => {
 
   const SectionThree = () => {
     const [activeIndex, setActiveIndex] = useState(0);
-    const [thumbsSwiper, setThumbsSwiper] = useState(null);
     console.log("🚀 ~ SectionThree ~ activeIndex:", activeIndex);
 
     const handleSlideChange = (swiper) => {
@@ -66,9 +67,9 @@ export const LandingPageView = () => {
     };
 
     return (
-      <Container className="pd-0" fluid>
+      <Container className="pd-0 mt-5 mb-5" fluid>
         <Row className={mergeClass("pd-0 m-0", classes?.secThreeRow)}>
-          <Col xs={4}>
+          <Col xs={5}>
             <div className={classes?.sec3TextDiv}>
               <h3 className="h3">50+ Beautiful rooms inspiration</h3>
               <p className="p3">
@@ -80,118 +81,98 @@ export const LandingPageView = () => {
               </div>
             </div>
           </Col>
-          <Col xs={8}>
+          <Col xs={7}>
             <div className="flex flex-row">
-            <Swiper
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={'auto'}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
-      </Swiper>
-
-          
-              {/*  thumv swiper */}
-              {/* <Swiper
-                style={{
-                  "--swiper-navigation-color": "#fff",
-                  "--swiper-pagination-color": "#fff",
-                }}
+              <Swiper
                 onSlideChange={handleSlideChange}
-                spaceBetween={10}
-                navigation={true}
-                thumbs={{ swiper: thumbsSwiper }}
-                modules={[FreeMode, Navigation, Thumbs]}
-                className={classes?.swiper1}
+                effect={"coverflow"}
+                grabCursor={true}
+                centeredSlides={true}
+                slidesPerView={"auto"}
+                coverflowEffect={{
+                  rotate: 50,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 1,
+                  // slideShadows: true,
+                }}
+                pagination={{
+                  dynamicBullets: true,
+                }}
+                modules={[EffectCoverflow, Pagination]}
+                className={classes?.swiperCoverFlow}
               >
                 {lp_swiper_data?.map((item, index) => (
-                  <SwiperSlide style={{ width: "100px" }} key={index}>
-                    <div className={classes?.imageTextClass}>
-                      <Image alt="image" src={item?.img} fill />
-                      <div
-                        style={activeIndex !== index ? { display: "none" } : {}}
-                        className={classes?.overlay}
-                      >
-                        <div className="flex flex-row">
-                          <p className="p3">{`${activeIndex} ----- ${item?.label}`}</p>
-                        </div>
-                        <div className="flex flex-row">
-                          <h6 className="h6 maxline1">{item?.tagline}</h6>
-                        </div>
+                  <SwiperSlide
+                    style={{
+                      width: "400px",
+                      height: "525px",
+                      overflow: "hidden",
+                    }}
+                    key={index}
+                  >
+                    <Image
+                      alt="image"
+                      src={item?.img}
+                      height={582}
+                      width={400}
+                    />
+                    <div
+                      style={activeIndex !== index ? { display: "none" } : {}}
+                      className={classes?.overlay}
+                    >
+                      <div className="flex flex-row justify-center items-center">
+                        <p className="p3">{`${activeIndex + 1}`}</p>
+                        <hr className={classes?.line} />
+                        <p className="p3">{`${item?.label}`}</p>
+                      </div>
+                      <div className="flex flex-row">
+                        <h6 className="h6 maxline2">{item?.tagline}</h6>
                       </div>
                     </div>
                   </SwiperSlide>
                 ))}
               </Swiper>
-              <Swiper
-                onSwiper={setThumbsSwiper}
-                spaceBetween={10}
-                slidesPerView={4}
-                freeMode={true}
-                watchSlidesProgress={true}
-                modules={[FreeMode, Navigation, Thumbs]}
-                className="mySwiper2"
-              >
-                {lp_swiper_data?.map((item, index) => (
-                  <SwiperSlide key={index}>
-                    <div className={classes?.imageTextClass}>
-                      <Image alt="image" src={item?.img} fill />
-                      <div
-                        style={activeIndex !== index ? { display: "none" } : {}}
-                        className={classes?.overlay}
-                      >
-                        <div className="flex flex-row">
-                          <p className="p3">{`${activeIndex} ----- ${item?.label}`}</p>
-                        </div>
-                        <div className="flex flex-row">
-                          <h6 className="h6 maxline1">{item?.tagline}</h6>
-                        </div>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper> */}
             </div>
           </Col>
         </Row>
       </Container>
+    );
+  };
+
+  const sectionFour = () => {
+    return (
+      <SectionContainer
+        heading={"Share your setup with"}
+        para={"#FuniroFurniture"}
+      >
+        <Col xs={4}>
+          <PhotoAlbum
+            rowConstraints={{ minPhotos: 2, maxPhotos: 2 }}
+            columns={2}
+            layout="columns"
+            photos={images1}
+          />
+        </Col>
+        <Col xs={4}>
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <div className={classes?.imageClass}>
+              <Image alt="image" src={"/images/product 5.png"} fill />
+            </div>
+          </div>
+        </Col>
+        <Col xs={4}>
+          <PhotoAlbum columns={2} layout="columns" photos={images2} />
+        </Col>
+      </SectionContainer>
     );
   };
 
@@ -222,6 +203,54 @@ export const LandingPageView = () => {
       {sectionTwo()}
       {/* section 3 */}
       <SectionThree />
+      {/* section four */}
+      {sectionFour()}
     </>
   );
 };
+
+const images1 = [
+  {
+    src: "/images/product1.png",
+    width: 100,
+    height: 100,
+  },
+  {
+    src: "/images/product 3.png",
+    width: 150,
+    height: 323,
+  },
+  {
+    src: "/images/product 2.png",
+    width: 50,
+    height: 50,
+  },
+  {
+    src: "/images/product 4.png",
+    width: 350,
+    height: 240,
+  },
+];
+
+const images2 = [
+  {
+    src: "/images/product 6.png",
+    width: 100,
+    height: 100,
+  },
+  {
+    src: "/images/product 7.png",
+    width: 270,
+    height: 400,
+  },
+  {
+    src: "/images/product 8.png",
+    width: 170,
+    height: 190,
+  },
+  {
+    src: "/images/product 9.png",
+    width: 250,
+    height: 195,
+  },
+];
