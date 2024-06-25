@@ -92,3 +92,31 @@
   font-size: 16px;
   font-weight: 600;
 }
+
+.lastFooterSecCont {
+  padding-bottom: 1rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .firstColDiv {
+    margin-bottom: 2rem;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .newsletterDiv {
+    margin-top: 2rem;
+  }
+
+  .subscribeCont {
+    display: flex;
+    gap: 10px;
+  }
+  .subscribeCont > div {
+    width: 90%;
+  }
+  .inputClass > input {
+    width: 90%;
+  }
+}

@@ -56,3 +56,9 @@
   display: flex;
   justify-content: space-around;
 }
+
+.logoContainerStyle {
+  position: relative;
+  height: 29px;
+  width: 135px;
+}

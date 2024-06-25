@@ -26,7 +26,7 @@ export const LandingPageView = () => {
         para={"Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
       >
         {range_type_data?.map((item, index) => (
-          <Col key={index} xs={4}>
+          <Col key={index} xxl={4} xl={4} lg={4} md={4} sm={12} xs={12}>
             <div className={classes?.rangeContainer}>
               <div className={classes?.imageClass}>
                 <Image alt="image" src={item?.img} fill />
@@ -50,7 +50,16 @@ export const LandingPageView = () => {
         heading={"Our Products"}
       >
         {product_array?.map((item, index) => (
-          <Col className="mb-3" xs={3} key={index}>
+          <Col
+            className="mb-3"
+            xxl={3}
+            xl={4}
+            lg={4}
+            md={6}
+            sm={12}
+            xs={12}
+            key={index}
+          >
             <ProductCard data={item} />
           </Col>
         ))}
@@ -69,19 +78,19 @@ export const LandingPageView = () => {
     return (
       <Container className="pd-0 mt-5 mb-5" fluid>
         <Row className={mergeClass("pd-0 m-0", classes?.secThreeRow)}>
-          <Col xs={5}>
+          <Col xxl={5} xl={5} lg={12} xs={12}>
             <div className={classes?.sec3TextDiv}>
               <h3 className="h3">50+ Beautiful rooms inspiration</h3>
               <p className="p3">
                 Our designer already made a lot of beautiful prototipe of rooms
                 that inspire you
               </p>
-              <div className={classes?.buttonContainer}>
+              <div className={classes?.buttonContainerSec2}>
                 <Button>Explore More</Button>
               </div>
             </div>
           </Col>
-          <Col xs={7}>
+          <Col xxl={7} xl={7} lg={12} xs={12}>
             <div className="flex flex-row">
               <Swiper
                 onSlideChange={handleSlideChange}
@@ -121,7 +130,7 @@ export const LandingPageView = () => {
                       style={activeIndex !== index ? { display: "none" } : {}}
                       className={classes?.overlay}
                     >
-                      <div className="flex flex-row justify-center items-center">
+                      <div className="flex flex-row  items-center">
                         <p className="p3">{`${activeIndex + 1}`}</p>
                         <hr className={classes?.line} />
                         <p className="p3">{`${item?.label}`}</p>
@@ -146,15 +155,17 @@ export const LandingPageView = () => {
         heading={"Share your setup with"}
         para={"#FuniroFurniture"}
       >
-        <Col xs={4}>
-          <PhotoAlbum
-            rowConstraints={{ minPhotos: 2, maxPhotos: 2 }}
-            columns={2}
-            layout="columns"
-            photos={images1}
-          />
+        <Col xxl={4} xl={4} lg={4} md={6} sm={12} xs={12}>
+          <div className={classes?.photoAlbum}>
+            <PhotoAlbum
+              rowConstraints={{ minPhotos: 2, maxPhotos: 2 }}
+              columns={2}
+              layout="columns"
+              photos={images1}
+            />
+          </div>
         </Col>
-        <Col xs={4}>
+        <Col className={classes?.colHide} xs={4}>
           <div
             style={{
               width: "100%",
@@ -169,8 +180,10 @@ export const LandingPageView = () => {
             </div>
           </div>
         </Col>
-        <Col xs={4}>
-          <PhotoAlbum columns={2} layout="columns" photos={images2} />
+        <Col xxl={4} xl={4} lg={4} md={6} sm={12} xs={12}>
+          <div className={classes?.photoAlbum}>
+            <PhotoAlbum columns={2} layout="columns" photos={images2} />
+          </div>
         </Col>
       </SectionContainer>
     );
@@ -246,7 +259,7 @@ const images2 = [
   {
     src: "/images/product 8.png",
     width: 170,
-    height: 190,
+    height: 205,
   },
   {
     src: "/images/product 9.png",

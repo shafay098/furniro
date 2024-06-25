@@ -41,7 +41,9 @@ export const Header = () => {
     <Container className={mergeClass("mt-4", classes?.headerContainer)}>
       <Row>
         <Col xs={3}>
-          <Image src={"/images/Logo.png"} height={29} width={135} alt="logo" />
+          <div className={classes?.logoContainerStyle}>
+            <Image src={"/images/Logo.png"} fill alt="logo" />
+          </div>
         </Col>
 
         {isMobile ? (

@@ -32,7 +32,7 @@ export const Footer = () => {
   return (
     <Container className="mt-32">
       <Row>
-        <Col xs={3}>
+        <Col xxl={3} xl={3} lg={12} xs={12}>
           <div className={classes?.firstColDiv}>
             <h3 className={classes?.headingText}>Furniro</h3>
             <p className={classes?.paraText}>
@@ -41,13 +41,17 @@ export const Footer = () => {
           </div>
         </Col>
 
-        <Col xs={3}>{listItems(linksObject1)}</Col>
+        <Col xxl={3} xl={3} lg={4} md={4} sm={4} xs={6}>
+          {listItems(linksObject1)}
+        </Col>
 
-        <Col xs={3}>{listItems(linksObject2)}</Col>
+        <Col xxl={3} xl={3} lg={4} md={4} sm={4} xs={6}>
+          {listItems(linksObject2)}
+        </Col>
 
-        <Col xs={3}>
+        <Col xxl={3} xl={3} lg={4} md={4} sm={4} xs={12}>
           {
-            <div>
+            <div className={classes?.newsletterDiv}>
               <p className={classes?.paraText}>Newsletter</p>
               <div className={classes?.subscribeCont}>
                 <Input
