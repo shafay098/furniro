@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { Container, Row, Col } from "react-bootstrap";
 import classes from "./LandingPageView.module.css";
@@ -17,6 +17,8 @@ import { EffectCoverflow, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import PhotoAlbum from "react-photo-album";
+import { Get } from "../../../axios";
+import { localBaseUrl, localHostBaseUrl } from "../../../config/UrlConfig";
 
 export const LandingPageView = () => {
   const sectionOne = () => {
