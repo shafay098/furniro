@@ -1,0 +1,50 @@
+.filterCont {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.filterRowClass {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f1e7;
+}
+
+.resultCountStyle {
+  padding: 0px 10px;
+  border-left: 1px solid black;
+}
+
+.showSortCont {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  gap: 10px;
+}
+
+.showStyle,
+.sortByStyle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.paginationCont {
+  margin-bottom: 3rem;
+}
+
+.ruleDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.posterRules {
+  width: 100%;
+
+  padding: 100px 1rem;
+  background-color: var(--bg-light-clr-v2);
+}

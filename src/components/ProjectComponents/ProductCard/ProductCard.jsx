@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import classes from "./ProductCard.module.css";
@@ -6,10 +8,18 @@ import { Button } from "@/components/CommonComponents/Button";
 import { CiShare2 } from "react-icons/ci";
 import { MdCompareArrows } from "react-icons/md";
 import { CiHeart } from "react-icons/ci";
+import { useRouter } from "next/navigation";
 
-export const ProductCard = ({ data }) => {
+export const ProductCard = ({ data, link = false, index }) => {
+  const router = useRouter();
+
   return (
-    <div className={classes?.cardContainer}>
+    <div
+      onClick={() => {
+        link ? router.push(`/shop/${index + 1}`) : null;
+      }}
+      className={classes?.cardContainer}
+    >
       <div className={classes?.imageDiv}>
         <Image alt="image" src={data?.image} fill />
         <div className={classes?.discountCircle}></div>

@@ -54,6 +54,7 @@ const product_data = {
 };
 
 export const product_array = Array(6).fill(product_data);
+export const product_array_shop = Array(22).fill(product_data);
 
 export const lp_swiper_data = [
   {
@@ -78,3 +79,17 @@ export const lp_swiper_data = [
     tagline: "Wonderfull Enviroment",
   },
 ];
+
+export const shop_product_data = {
+  title: "Asgaard sofa",
+  price: "25000",
+  advantage:
+    "Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.",
+  colors: ["purple", "black", "brown"],
+  size: ["lg", "xl", "xs"],
+  sku: "SS001",
+  category: "Sofas",
+  tags: ["sofa", "chair", "home", "shop"],
+  description:
+    "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road. Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
+};

@@ -1,0 +1,61 @@
+.doubleBreadCrumbDiv {
+  display: flex;
+  justify-content: start;
+  padding: 0px 1rem;
+  align-items: center;
+  background-color: var(--bg-light-clr-v3);
+  height: 100px;
+}
+
+.doubleBreadCrumbDiv > a {
+  color: #9f9f9f;
+  font-family: var(--Poppins);
+  font-size: 16px;
+  font-weight: 400;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.doubleBreadCrumbDiv > p {
+  padding-left: 1rem;
+}
+
+.swiper2ImageCont {
+  position: relative;
+  width: 76px;
+  height: 80px;
+}
+
+.swiper2ImageCont > img {
+  object-fit: cover;
+}
+
+.swiperSlideClass {
+}
+
+.mySwiper2 {
+  height: 300px;
+}
+
+.mySwiper1 {
+  height: 300px;
+}
+
+.swiperRootContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.swiperSlideN2 {
+  height: 200px;
+  width: 400px;
+}
+
+.swiper1ImageCont {
+  height: 500px;
+  width: 423px;
+  position: relative;
+}
+
+.swiper1ImageCont > img {
+  object-fit: fill;
+}

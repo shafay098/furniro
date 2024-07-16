@@ -9,9 +9,11 @@ export const Button = ({
   rightIcon,
   variant = "primary",
   containerClass,
+  onClick = () => {},
 }) => {
   return (
     <button
+      onClick={onClick}
       className={mergeClass(classes?.button, containerClass && containerClass)}
       variant={variant}
     >
